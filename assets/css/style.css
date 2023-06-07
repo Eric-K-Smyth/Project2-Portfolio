@@ -29,3 +29,7 @@ h1{
 .banner {
     background-size: 100vw;
 }
+.firstproject{
+    display: flex;
+    size: 50vw;
+}
