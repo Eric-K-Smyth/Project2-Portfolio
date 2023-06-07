@@ -1,0 +1,31 @@
+.header {
+    background-color: blue;
+    color: white;
+   
+}
+h1{
+    color: white;
+   font-size: 200%;
+   display: flex;
+   align-items: stretch;
+   padding: 20px;
+   margin: 20px;
+   
+}
+.header nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    
+}
+.banner {
+    background-size: 100vw;
+}
