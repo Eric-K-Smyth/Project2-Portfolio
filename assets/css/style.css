@@ -43,7 +43,8 @@ a {
     justify-content: space-around;
 }
 .flex-title{
-    flex: 0 0 calc(25% - 10px);
+   /* flex: 0 0 calc(25% - 10px); */
+    flex-basis: 25%;
     margin: 10px;
     border-right: solid navy;
     font-weight: 900;
@@ -55,7 +56,8 @@ a {
     
 }
 .flex-item{
-    flex: 0 0 calc(66.66% - 10px);
+   /* flex: 0 0 calc(66.66% - 10px); */
+    flex-basis: 66.66%;
     margin: 10px;
     border: solid black;
 }
@@ -68,13 +70,67 @@ a {
     font-size: 20px;
 }
 
-.work-cards{
-    border: red;
+.work-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   /* flex: 1;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto; */
+}
+.bigimage{
+    flex: 2;
+    max-width: 100%;
+}
+.littleimage{
+    flex: 1;
+    max-width: 50%;
+    height: auto;
 }
 .contact-head{
     height: 50px;
 }
 .contatcs{
     display: flex;
-    align-items: center;
+
 }
+@media screen and (max-width: 768px) {
+    h1 {
+      font-size: 200%;
+      margin-left: 10px;
+    }
+  
+    ul {
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      padding: 10px;
+    }
+  
+    .flex-title {
+      height: auto;
+      text-align: center;
+    }
+  
+    .flex-item {
+      height: auto;
+    }
+  
+    .work-cards {
+      justify-content: center;
+    }
+  
+    .bigimage, .littleimage {
+      max-width: 100%;
+    }
+  
+    .contact-head, .contacts {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
