@@ -1,35 +1,80 @@
-.header {
-    background-color: blue;
-    color: white;
-   
+*{
+    font-family: sans-serif;
 }
-h1{
+header {
+    background-color: navy;
     color: white;
-   font-size: 200%;
-   display: flex;
-   align-items: stretch;
-   padding: 20px;
-   margin: 20px;
-   
-}
-.header nav ul {
-    display: flex;
-    list-style-type: none;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    
+    width: 100%;
+    height: 100px; 
 }
 
-.header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+h1{
+    color: white;
+   font-size: 300%;
+   margin-left: 20px;
+   float: left;
+}
+nav{
+    float: right;
+}
+ul {
+    display: flex;
+    align-items: right;
+    text-align: right;
+    color: white;
+    list-style-type: none;
+}
+li {
+    display: inline;
+  padding: 20px;
+  text-decoration: none;
     
 }
+a {
+    text-decoration: none;
+    color: white;
+  }
 .banner {
     background-size: 100vw;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flex-title{
+    flex: 0 0 calc(25% - 10px);
+    margin: 10px;
+    border-right: solid navy;
+    font-weight: 900;
+    height: 500px;
+    text-align: right;
+    padding: 2%;
+    color: navy;
+    font-size: 150%;
+    
+}
+.flex-item{
+    flex: 0 0 calc(66.66% - 10px);
+    margin: 10px;
+    border: solid black;
 }
 .firstproject{
     display: flex;
     size: 50vw;
+}
+
+.about-me-des{
+    font-size: 20px;
+}
+
+.work-cards{
+    border: red;
+}
+.contact-head{
+    height: 50px;
+}
+.contatcs{
+    display: flex;
+    align-items: center;
 }
