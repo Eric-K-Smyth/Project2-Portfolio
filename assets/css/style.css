@@ -16,8 +16,9 @@ h1{
     color: white;
    font-size: 300%;
    margin-left: 20px;
-   float: left;
+   float: left; /*Added float since the nav and title didn't want to separate nicely*/
 }
+
 nav{
     float: right;
 }
@@ -26,35 +27,65 @@ nav ul {
     align-items: right;
     text-align: right;
     color: white;
-    list-style-type: none;
+    list-style-type: none; /*Allows the list to move around the header*/
 }
+
 nav li {
     display: inline-block;
   padding: 20px;
-  text-decoration: none;
-    
-}
-nav a {
-    text-decoration: none;
-    color: white;
-  }
-  main{
-    background-color: lightgrey;
-    
-  }
-body{
-  background-color: lightgrey;
+  text-decoration: none;  /*Allows links to line up horizontally*/
 }
 
-.flex-container{
+nav a {
+    text-decoration: none;
+    color: white; /*Makes link plain white text*/
+}
+
+main{
+    background-color: lightgrey;   
+}
+
+body{
+  background-color: lightgrey; /*Coverup for gap between body and header*/
+}
+
+.image-card {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden; 
+}
+/*title for image is as wide as the image*/
+.image-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/*style for the titlecard*/
+
+.image-card:hover .image-card-overlay {
+  opacity: 1;
+}
+/*Appears when you hover over the image*/
+.image-card-overlay h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.flex-container{ /*Parent zone for all the flexboxes in main*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-left: 0;
     width: 100%;
-   
 }
-.flex-title{
+
+.flex-title{ /*Smaller flexboxes for the titles*/
     flex-basis: 25%;
     margin: 10px;
     border-right: solid var(--darkcolor);
@@ -63,21 +94,24 @@ body{
     padding: 2%;
     color: var(--darkcolor);
     font-size: 150%;
-    
 }
-.flex-item{
+
+.flex-item{ /*larger flexboxes for the content*/
     flex-basis: 66.66%;
     margin: 10px;
     border: solid black;
 }
+
 .about-me-title{
-  height: 50px;
+  height: 100px; /*Shrink about me so it looks better*/
 }
+
 .pfp{
   height: 100%;
-  display: inline;
+  display: inline; 
 }
-.about-me-des{
+
+.about-me-des{ /*the about me description flexes with the size of its box*/
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -85,51 +119,57 @@ body{
     font-size: 16.5px
 }
 
-.work-cards {
+.work-cards { /*Nested flexbox for images of works*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.bigimage{
+
+.bigimage{ /*The big image takes up the whole box*/
     flex: 2;
     max-width: 100%;
 }
-.littleimage{
+
+.littleimage:hover, /*Images will highlight when you hover over them*/
+.bigimage:hover {
+  filter: brightness(70%);
+}
+
+.littleimage{ /*Little images only take up 50% so they can double up in rows*/
     flex: 1;
     max-width: 50%;
     height: auto;
 }
+
 .contact-head{
-    height: 50px;
+    height: 50px; /*Make contacts smaller to look better*/
 }
 
-footer {
+footer { /*Aligning the links*/
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-footer section {
+footer section { /*Making the links evenly spaced*/
   display: flex;
   justify-content: space-around;
-  align-items: center;
   width: 100%;
 }
 
-footer a {
+footer a { /*link stylization*/
   color: black;
   font-size: 30px;
   text-decoration: none;
   margin: 10px;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1100px) { /*On anything smaller than a desktop it stacks vertically so you can scroll*/
     h1 {
-      font-size: 200%;
-      margin-left: 10px;
+      font-size: 200%;  
     }
-  
+    
     ul {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-end;
       padding: 0;
       margin: 0;
