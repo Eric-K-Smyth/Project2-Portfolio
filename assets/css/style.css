@@ -1,11 +1,15 @@
+:root {
+  --darkcolor: #303030;
+}
 *{
     font-family: sans-serif;
 }
 header {
-    background-color: navy;
+    background-color: var(--darkcolor);
     color: white;
     width: 100%;
     height: 100px; 
+    margin-bottom: 0;
 }
 
 h1{
@@ -17,67 +21,74 @@ h1{
 nav{
     float: right;
 }
-ul {
+nav ul {
     display: flex;
     align-items: right;
     text-align: right;
     color: white;
     list-style-type: none;
 }
-li {
-    display: inline;
+nav li {
+    display: inline-block;
   padding: 20px;
   text-decoration: none;
     
 }
-a {
+nav a {
     text-decoration: none;
     color: white;
   }
-.banner {
-    background-size: 100vw;
+  main{
+    background-color: lightgrey;
+    
+  }
+body{
+  background-color: lightgrey;
 }
+
 .flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left: 0;
+    width: 100%;
+   
 }
 .flex-title{
-   /* flex: 0 0 calc(25% - 10px); */
     flex-basis: 25%;
     margin: 10px;
-    border-right: solid navy;
+    border-right: solid var(--darkcolor);
     font-weight: 900;
-    height: 500px;
     text-align: right;
     padding: 2%;
-    color: navy;
+    color: var(--darkcolor);
     font-size: 150%;
     
 }
 .flex-item{
-   /* flex: 0 0 calc(66.66% - 10px); */
     flex-basis: 66.66%;
     margin: 10px;
     border: solid black;
 }
-.firstproject{
-    display: flex;
-    size: 50vw;
+.about-me-title{
+  height: 50px;
 }
-
+.pfp{
+  height: 100%;
+  display: inline;
+}
 .about-me-des{
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    font-size: 16.5px
 }
 
 .work-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   /* flex: 1;
-    object-fit: cover;
-    max-width: 100%;
-    height: auto; */
 }
 .bigimage{
     flex: 2;
@@ -91,9 +102,25 @@ a {
 .contact-head{
     height: 50px;
 }
-.contatcs{
-    display: flex;
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+footer a {
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 10px;
 }
 @media screen and (max-width: 768px) {
     h1 {
@@ -115,18 +142,28 @@ a {
     .flex-title {
       height: auto;
       text-align: center;
+      border-right: none;
+      border-bottom: solid var(--darkcolor);
     }
   
     .flex-item {
       height: auto;
+    }
+    
+    .pfp{
+      max-width: 50%;
     }
   
     .work-cards {
       justify-content: center;
     }
   
-    .bigimage, .littleimage {
+    .bigimage {
       max-width: 100%;
+    }
+    
+    .littleimage{
+      max-width: 50%;
     }
   
     .contact-head, .contacts {
