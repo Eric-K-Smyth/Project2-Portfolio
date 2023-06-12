@@ -1,4 +1,7 @@
 # Eric Smyth Portfolio
+https://eric-k-smyth.github.io/Project2-Portfolio/
+![eric-k-smyth github io_Project2-Portfolio_ (1)](https://github.com/Eric-K-Smyth/Project2-Portfolio/assets/130538145/795d98e5-c131-405f-abbf-95595d34bfbc)
+
 
 ## Description
 A webpage to display my works to give future employers an example of what i'm capable of.
