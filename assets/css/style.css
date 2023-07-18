@@ -173,9 +173,10 @@ footer a { /*link stylization*/
 }
 .little-image-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
+
 /*title for image is as wide as the image*/
 .little-image-card-overlay {
   position: absolute;
